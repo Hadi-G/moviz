@@ -9,6 +9,10 @@ app.get('/', function(req, res){
   res.render('home');
 });
 
+app.get('/home', function(req, res){
+  res.render('home');
+});
+
 app.get('/contact', function(req, res){
   res.render('contact');
 });
