@@ -13,7 +13,8 @@ mongoose.connect('mongodb://hadi:zipang75@ds129532.mlab.com:29532/cinema',option
 var movieSchema = mongoose.Schema({
   image : String,
   title : String,
-  overview : String
+  overview : String,
+  id: String
 });
 
 var movieModel = mongoose.model('movie',movieSchema);
@@ -64,7 +65,8 @@ app.get('/home', function(req, res){
     var favorite = new movieModel({
       image : single.poster_path,
       title : single.title,
-      overview : single.overview
+      overview : single.overview,
+      id : single.id
     });
     favorite.save(function(error, verif){
     });
