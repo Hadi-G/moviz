@@ -64,7 +64,7 @@ for(var i =0;i<mesFilms.length;i++){
 	%>
 						<div class="movie">
 							<figure class="movie-poster"><img src="https://image.tmdb.org/t/p/w500/<%=mesFilms[i].image%>" alt="#"></figure>
-							<div class="movie-title"><a href="single"><%=mesFilms[i].title%></a> <a href="review?id=<%=mesFilms[i]._id%>" class ="glyphicon glyphicon-remove-circle" role="button" ></a></div>
+							<div class="movie-title"><a href="single?id=<%=mesFilms[i].id%>"><%=mesFilms[i].title%></a> <a href="review?id=<%=mesFilms[i]._id%>" class ="glyphicon glyphicon-remove-circle" role="button" ></a></div>
 							<p><%=mesFilms[i].overview%></p>
 						</div>
 <%
